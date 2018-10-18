@@ -11,6 +11,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "MotionControllerComponent.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
+#include "Engine.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -113,6 +114,8 @@ void AFIT2097_AAA2Character::SetupPlayerInputComponent(class UInputComponent* Pl
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
 
+
+	PlayerInputComponent->BindAction("Raycast", IE_Pressed, this, &AFIT2097_AAA2Character::performRaycast);
 	// Bind jump events
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
@@ -297,4 +300,23 @@ bool AFIT2097_AAA2Character::EnableTouchscreenMovement(class UInputComponent* Pl
 	}
 	
 	return false;
+}
+
+void AFIT2097_AAA2Character::performRaycast()
+{
+
+	FHitResult* HitResult = new FHitResult();
+	FVector startTrace = FirstPersonCameraComponent->GetComponentLocation();
+	FVector forwardVector = FirstPersonCameraComponent->GetForwardVector();
+	FVector endTrace = ((forwardVector * 5000.f) + startTrace);
+	FCollisionQueryParams* TraceParams = new FCollisionQueryParams();
+
+	if (GetWorld()->LineTraceSingleByChannel(*HitResult, startTrace, endTrace, ECC_Visibility, *TraceParams))
+	{
+		DrawDebugLine(GetWorld(), startTrace, endTrace, FColor(255, 0, 0), true);
+
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("You Hit: %s"), *HitResult->Actor->GetName()));
+	}
+	
+
 }

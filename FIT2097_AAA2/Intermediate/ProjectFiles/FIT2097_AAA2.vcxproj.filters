@@ -1,70 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\FIT2097_AAA2.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{18583F7F-BEBD-4E8D-AABB-473E3079CE13}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\FIT2097_AAA2.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\FIT2097_AAA2Editor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{2ED10FB4-0C52-4307-87E6-35330C0F1077}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\FIT2097_AAA2">
-			<UniqueIdentifier>{A6A960CA-F4FA-4464-B73F-A7898F35E94F}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2.Build.cs">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2.cpp">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2.h">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2Character.cpp">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2Character.h">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2GameMode.cpp">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2GameMode.h">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2HUD.cpp">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2HUD.h">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2Projectile.cpp">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2Projectile.h">
-			<Filter>Source\FIT2097_AAA2</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\FIT2097_AAA2.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{18583F7F-BEBD-4E8D-AABB-473E3079CE13}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\FIT2097_AAA2.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\FIT2097_AAA2Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{2ED10FB4-0C52-4307-87E6-35330C0F1077}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\FIT2097_AAA2">
+      <UniqueIdentifier>{A6A960CA-F4FA-4464-B73F-A7898F35E94F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2.Build.cs">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2.cpp">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2.h">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2Character.cpp">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2Character.h">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2GameMode.cpp">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2GameMode.h">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2HUD.cpp">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2HUD.h">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2Projectile.cpp">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\FIT2097_AAA2Projectile.h">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\MyNewActor.h">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\Target.h">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\MyNewActor.cpp">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\Target.cpp">
+      <Filter>Source\FIT2097_AAA2</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
