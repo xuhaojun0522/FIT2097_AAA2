@@ -80,6 +80,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	uint32 bUsingMotionControllers : 1;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Fuse")
+		bool fuse;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Key")
+		bool key;
+
+
 protected:
 	
 	/** Fires a projectile. */
