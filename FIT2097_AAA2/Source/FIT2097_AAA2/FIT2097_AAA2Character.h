@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Components/TimelineComponent.h"
 #include "FIT2097_AAA2Character.generated.h"
 
 class UInputComponent;
@@ -51,6 +52,8 @@ public:
 protected:
 	virtual void BeginPlay();
 
+	virtual void Tick(float DeltaTime) override;
+
 public:
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
@@ -80,11 +83,50 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	uint32 bUsingMotionControllers : 1;
 
+	//for fuse check
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Fuse")
 		bool fuse;
 
+	//for key check
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Key")
 		bool key;
+
+	//for key check
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BinaryCombo")
+		bool comboCheck;
+
+	//character related
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+		float FullHealth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+		float Health;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+		float HealthPercentage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+		bool redFlash;
+
+	
+	//Get health
+	UFUNCTION(BlueprintPure, Category = "Health")
+		float getHealth();
+
+	//Get health in text
+	UFUNCTION(BlueprintPure, Category = "Health")
+		FText getHealthInText();
+
+	//Set damage state
+	UFUNCTION()
+		void SetDamageState();
+
+	//Play red flash
+	UFUNCTION(BlueprintPure, Category = "Health")
+		bool PlayFlash();
+
+	UFUNCTION(BlueprintCallable, Category = "Health")
+		void UpdateHealth(float HealthChange);
 
 
 protected:
@@ -140,7 +182,7 @@ protected:
 	bool EnableTouchscreenMovement(UInputComponent* InputComponent);
 
 private:
-	void performRaycast();
+	void performRaytrace();
 
 
 public:

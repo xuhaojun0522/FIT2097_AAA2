@@ -406,8 +406,12 @@
     <NMakeOutput>..\..\Binaries\HTML5\FIT2097_AAA2-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\CampFire.cpp" />
+    <ClCompile Include="..\..\Source\FIT2097_AAA2\HealthPickup.cpp" />
     <ClCompile Include="..\..\Source\FIT2097_AAA2\MyNewActor.cpp" />
     <ClCompile Include="..\..\Source\FIT2097_AAA2\Target.cpp" />
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\CampFire.h" />
+    <ClInclude Include="..\..\Source\FIT2097_AAA2\HealthPickup.h" />
     <ClInclude Include="..\..\Source\FIT2097_AAA2\MyNewActor.h" />
     <ClInclude Include="..\..\Source\FIT2097_AAA2\Target.h" />
     <None Include="..\..\FIT2097_AAA2.uproject" />
