@@ -3,14 +3,15 @@
 #include "CampFire.h"
 #include "Kismet/GameplayStatics.h"
 #include "TimerManager.h"
-
+#include "Components/BoxComponent.h"
+#include "Particles/ParticleSystemComponent.h"
 
 // Sets default values
 ACampFire::ACampFire()
 {
 	MyBoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("My Box Component"));
 	MyBoxComponent->InitBoxExtent(FVector(50.0f, 50.0f, 50.0f));
-	RootComponent = MyBoxComponent;	
+	RootComponent = MyBoxComponent;
 
 	Fire = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("My Fire"));
 	Fire->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
@@ -35,7 +36,7 @@ void ACampFire::OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class 
 
 void ACampFire::OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	bCanApplyDamage = true;
+	bCanApplyDamage = false;
 	GetWorldTimerManager().ClearTimer(FireTimerHandle);
 }
 

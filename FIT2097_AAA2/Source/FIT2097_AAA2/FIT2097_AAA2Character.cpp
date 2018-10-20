@@ -93,9 +93,9 @@ void AFIT2097_AAA2Character::BeginPlay()
 	Super::BeginPlay();
 
 	// Character Variables
-	FullHealth = 1000.0f;
+	FullHealth = 100.0f;
 	//Health = FullHealth;
-	Health = 900.0f;
+	Health = 90.0f;
 	HealthPercentage = 0.9f;
 	bCanBeDamaged = true;
 	fuse = false;

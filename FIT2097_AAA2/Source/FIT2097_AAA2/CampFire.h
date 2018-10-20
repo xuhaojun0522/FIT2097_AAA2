@@ -2,12 +2,8 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Particles/ParticleSystemComponent.h"
-#include "Components/BoxComponent.h"
 #include "CampFire.generated.h"
-
 
 class UBoxComponent;
 class UParticleSystemComponent;

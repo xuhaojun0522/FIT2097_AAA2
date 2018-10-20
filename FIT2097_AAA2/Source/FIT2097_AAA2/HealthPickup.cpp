@@ -21,7 +21,7 @@ void AHealthPickup::OnOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
 
 		if (MyCharacter && MyCharacter->getHealth() < 1.0f)
 		{
-			MyCharacter->UpdateHealth(100.0f);
+			MyCharacter->UpdateHealth(30.0f);
 			Destroy();
 		}
 	}
