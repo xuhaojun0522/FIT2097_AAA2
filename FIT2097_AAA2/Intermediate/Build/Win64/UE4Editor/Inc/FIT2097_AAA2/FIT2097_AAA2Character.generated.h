@@ -13,95 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FIT2097_AAA2_FIT2097_AAA2Character_generated_h
 
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execUpdateHealth) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_HealthChange); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdateHealth(Z_Param_HealthChange); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPlayFlash) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->PlayFlash(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDamageState) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDamageState(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execgetHealthInText) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->getHealthInText(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execgetHealth) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->getHealth(); \
-		P_NATIVE_END; \
-	}
-
-
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execUpdateHealth) \
-	{ \
-		P_GET_PROPERTY(UFloatProperty,Z_Param_HealthChange); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->UpdateHealth(Z_Param_HealthChange); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execPlayFlash) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->PlayFlash(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execSetDamageState) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		P_THIS->SetDamageState(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execgetHealthInText) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(FText*)Z_Param__Result=P_THIS->getHealthInText(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execgetHealth) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(float*)Z_Param__Result=P_THIS->getHealth(); \
-		P_NATIVE_END; \
-	}
-
-
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_INCLASS_NO_PURE_DECLS \
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_RPC_WRAPPERS
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFIT2097_AAA2Character(); \
 	friend FIT2097_AAA2_API class UClass* Z_Construct_UClass_AFIT2097_AAA2Character(); \
@@ -111,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_INCLASS \
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAFIT2097_AAA2Character(); \
 	friend FIT2097_AAA2_API class UClass* Z_Construct_UClass_AFIT2097_AAA2Character(); \
@@ -121,7 +35,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_STANDARD_CONSTRUCTORS \
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFIT2097_AAA2Character(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFIT2097_AAA2Character) \
@@ -134,7 +48,7 @@ private: \
 public:
 
 
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_ENHANCED_CONSTRUCTORS \
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AFIT2097_AAA2Character(AFIT2097_AAA2Character&&); \
@@ -145,7 +59,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFIT2097_AAA2Character); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFIT2097_AAA2Character)
 
 
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_PRIVATE_PROPERTY_OFFSET \
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AFIT2097_AAA2Character, Mesh1P); } \
 	FORCEINLINE static uint32 __PPO__FP_Gun() { return STRUCT_OFFSET(AFIT2097_AAA2Character, FP_Gun); } \
 	FORCEINLINE static uint32 __PPO__FP_MuzzleLocation() { return STRUCT_OFFSET(AFIT2097_AAA2Character, FP_MuzzleLocation); } \
@@ -156,25 +70,25 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFIT2097_AAA2Character); \
 	FORCEINLINE static uint32 __PPO__L_MotionController() { return STRUCT_OFFSET(AFIT2097_AAA2Character, L_MotionController); }
 
 
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_12_PROLOG
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_GENERATED_BODY_LEGACY \
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_11_PROLOG
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_PRIVATE_PROPERTY_OFFSET \
-	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_RPC_WRAPPERS \
-	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_INCLASS \
-	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_STANDARD_CONSTRUCTORS \
+	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_PRIVATE_PROPERTY_OFFSET \
+	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_RPC_WRAPPERS \
+	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_INCLASS \
+	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_GENERATED_BODY \
+#define FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_PRIVATE_PROPERTY_OFFSET \
-	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_INCLASS_NO_PURE_DECLS \
-	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_15_ENHANCED_CONSTRUCTORS \
+	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_PRIVATE_PROPERTY_OFFSET \
+	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_INCLASS_NO_PURE_DECLS \
+	FIT2097_AAA2_Source_FIT2097_AAA2_FIT2097_AAA2Character_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

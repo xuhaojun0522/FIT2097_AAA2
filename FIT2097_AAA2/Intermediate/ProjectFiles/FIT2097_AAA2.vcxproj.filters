@@ -73,24 +73,12 @@
     <ClInclude Include="..\..\Source\FIT2097_AAA2\Target.h">
       <Filter>Source\FIT2097_AAA2</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\FIT2097_AAA2\HealthPickup.h">
-      <Filter>Source\FIT2097_AAA2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\FIT2097_AAA2\CampFire.h">
-      <Filter>Source\FIT2097_AAA2</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\FIT2097_AAA2\MyNewActor.cpp">
       <Filter>Source\FIT2097_AAA2</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\FIT2097_AAA2\Target.cpp">
-      <Filter>Source\FIT2097_AAA2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\FIT2097_AAA2\HealthPickup.cpp">
-      <Filter>Source\FIT2097_AAA2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\FIT2097_AAA2\CampFire.cpp">
       <Filter>Source\FIT2097_AAA2</Filter>
     </ClCompile>
   </ItemGroup>

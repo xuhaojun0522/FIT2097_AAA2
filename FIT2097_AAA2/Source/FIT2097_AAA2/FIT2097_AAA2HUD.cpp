@@ -6,16 +6,12 @@
 #include "TextureResource.h"
 #include "CanvasItem.h"
 #include "UObject/ConstructorHelpers.h"
-#include "Blueprint/UserWidget.h"
 
 AFIT2097_AAA2HUD::AFIT2097_AAA2HUD()
 {
 	// Set the crosshair texture
 	static ConstructorHelpers::FObjectFinder<UTexture2D> CrosshairTexObj(TEXT("/Game/FirstPerson/Textures/FirstPersonCrosshair"));
 	CrosshairTex = CrosshairTexObj.Object;
-
-	static ConstructorHelpers::FClassFinder<UUserWidget> HealthBarObj(TEXT("/Game/Blueprint/HUD_Widget/HUD"));
-	HUDWidgetClass = HealthBarObj.Class;
 }
 
 
@@ -36,20 +32,4 @@ void AFIT2097_AAA2HUD::DrawHUD()
 	FCanvasTileItem TileItem( CrosshairDrawPosition, CrosshairTex->Resource, FLinearColor::White);
 	TileItem.BlendMode = SE_BLEND_Translucent;
 	Canvas->DrawItem( TileItem );
-}
-
-
-void AFIT2097_AAA2HUD::BeginPlay()
-{
-	Super::BeginPlay();
-
-	if (HUDWidgetClass != nullptr)
-	{
-		currentWidget = CreateWidget<UUserWidget>(GetWorld(), HUDWidgetClass);
-
-		if (currentWidget)
-		{
-			currentWidget->AddToViewport();
-		}
-	}
 }

@@ -12,8 +12,6 @@
 #include "MotionControllerComponent.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
 #include "Engine.h"
-#include "Kismet/KismetMathLibrary.h"
-#include "TimerManager.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -92,15 +90,8 @@ void AFIT2097_AAA2Character::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
-	// Character Variables
-	FullHealth = 1000.0f;
-	//Health = FullHealth;
-	Health = 900.0f;
-	HealthPercentage = 0.9f;
-	bCanBeDamaged = true;
 	fuse = false;
 	key = false;
-	comboCheck = false;
 
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
@@ -119,15 +110,6 @@ void AFIT2097_AAA2Character::BeginPlay()
 	}
 }
 
-void AFIT2097_AAA2Character::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-	FTimeline MyTimeline;
-
-	MyTimeline.TickTimeline(DeltaTime);
-}
-
-
 //////////////////////////////////////////////////////////////////////////
 // Input
 
@@ -137,7 +119,7 @@ void AFIT2097_AAA2Character::SetupPlayerInputComponent(class UInputComponent* Pl
 	check(PlayerInputComponent);
 
 
-	PlayerInputComponent->BindAction("Raytrace", IE_Pressed, this, &AFIT2097_AAA2Character::performRaytrace);
+	PlayerInputComponent->BindAction("Raycast", IE_Pressed, this, &AFIT2097_AAA2Character::performRaycast);
 	// Bind jump events
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
@@ -324,9 +306,7 @@ bool AFIT2097_AAA2Character::EnableTouchscreenMovement(class UInputComponent* Pl
 	return false;
 }
 
-
-//perform ray-trace
-void AFIT2097_AAA2Character::performRaytrace()
+void AFIT2097_AAA2Character::performRaycast()
 {
 
 	FHitResult* HitResult = new FHitResult();
@@ -344,41 +324,3 @@ void AFIT2097_AAA2Character::performRaytrace()
 	
 
 }
-
-float AFIT2097_AAA2Character::getHealth()
-{
-	return HealthPercentage;
-}
-
-FText AFIT2097_AAA2Character::getHealthInText()
-{
-	int32 HP = FMath::RoundHalfFromZero(HealthPercentage * 100);
-	FString HPS = FString::FromInt(HP);
-	FString HealthHUD = HPS + FString(TEXT("%"));
-	FText HPText = FText::FromString(HealthHUD);
-	return HPText;
-}
-
-void AFIT2097_AAA2Character::SetDamageState()
-{
-	bCanBeDamaged = true;
-}
-
-bool AFIT2097_AAA2Character::PlayFlash()
-{
-	if (redFlash)
-	{
-		redFlash = false;
-		return true;
-	}
-
-	return false;
-}
-
-void AFIT2097_AAA2Character::UpdateHealth(float HealthChange)
-{
-	Health += HealthChange;
-	Health = FMath::Clamp(Health, 0.0f, FullHealth);
-	HealthPercentage = Health / FullHealth;
-}
-
